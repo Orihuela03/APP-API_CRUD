@@ -1,16 +1,23 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>my-bicycles</ion-title>
+    <ion-buttons slot="end">
+      <ion-button color='success' (click)="createBicycles()">Agregar Registro</ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content >
+<ion-content>
   <ion-list>
     <ion-item *ngFor="let b of bicycles">
       <ion-label>
-        <h1>{{b.brand}}</h1>
-        <p>{{b.model}}</p>
+        <h1>{{ b.brand }}</h1>
+        <p>{{ b.model }}</p>
       </ion-label>
+      <ion-buttons slot="end">
+        <ion-button color="primary" (click)="updateBicycles()" >Modificar Registro</ion-button>
+        <ion-button color="danger" (click)="deleteBicycles()" >Eliminar Registro</ion-button>
+      </ion-buttons>
     </ion-item>
   </ion-list>
 </ion-content>

@@ -13,4 +13,10 @@ export class BicycleService {
   getBicycles() {
     return this.httpClient.get(this.endpoint);
   }
+
+  deleteBicyles() {}
+
+  updateBicyles() {}
+
+  createBicyles() {}
 }

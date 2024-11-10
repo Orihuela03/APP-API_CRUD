@@ -20,6 +20,12 @@ export class MyBicyclesPage implements OnInit {
     this.bicycleService.getBicycles().subscribe(response => {
       this.bicycles = response;
     });
-
   }
+
+  deleteBicycles() {}
+  
+  updateBicycles() {}
+
+  createBicycles() {}
+  
 }
